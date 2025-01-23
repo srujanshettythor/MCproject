@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="22dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="210dp"
+        android:layout_height="190dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Main Image -->
+            <ImageView
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza_sample" />
+
+            <!-- Bottom Overlay -->
+            <ImageView
+                android:id="@+id/O1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_btm_overlay" />
+
+            <!-- Text: Title -->
+            <TextView
+                android:id="@+id/pop1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/popp"
+                android:text="Sample Recipe Title"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <!-- Text: Cooking Time -->
+            <TextView
+                android:id="@+id/poptime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="7dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/popp"
+                android:text="🕒 20 Mins"
+                android:textColor="@android:color/white"
+                android:textSize="11sp" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

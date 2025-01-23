@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity"
+    app:layoutDescription="@xml/activity_recipe_scene">
+
+    <ImageView
+        android:id="@+id/items"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza_sample"
+        android:scaleType="centerCrop"
+        android:hapticFeedbackEnabled="true"
+        android:background="#F6F6F6"/>
+
+    <ImageView
+        android:id="@+id/shade"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintBottom_toBottomOf="@+id/items"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/items"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_btm_overlay" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:padding="4dp"
+        android:hapticFeedbackEnabled="true"
+        android:foregroundGravity="center"
+        android:background="@drawable/card_back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/items"
+        app:srcCompat="@drawable/back_icon" />
+
+    <ImageView
+        android:id="@+id/full"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:foregroundGravity="center"
+        android:padding="4dp"
+        android:hapticFeedbackEnabled="true"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/items"
+        app:srcCompat="@drawable/full_size_ic" />
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="479dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/card_recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/items"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/title"
+            android:background="@drawable/btn_ing"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="34dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/popp"
+            android:backgroundTint="#75DF79"
+            android:text="Ingredients" />
+
+        <ScrollView
+            android:id="@+id/ing_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_alignParentStart="true"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/ingtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/step"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/title"
+            android:background="@drawable/btn_ing"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="34dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/popp"
+            android:backgroundTint="#75DF79"
+            android:text="Steps" />
+
+        <ScrollView
+            android:id="@+id/step_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/step"
+            android:layout_alignParentStart="true"
+            android:padding="10sp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/steptext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </ScrollView>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/popp"
+            android:text="I am sample"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/clock_icon"
+            app:tint="#019267" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/imageView10"
+            android:gravity="center_vertical"
+            android:text="30min"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/goup"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/scroll_up" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
